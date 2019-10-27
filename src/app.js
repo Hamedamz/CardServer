@@ -43,6 +43,7 @@ app.post('/cards', (req, res) => {
       console.log(error)
     }
     res.send({
+      _id: new_card._id,
       success: true,
       message: 'Card saved successfully!'
     })
