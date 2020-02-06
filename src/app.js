@@ -21,7 +21,7 @@ var Card = require('../models/cards')
 // Fetch all cards
 app.get('/cards', (req, res) => {
   Card.find({}, 'title color', function (error, cards) {
-    if (error) { console.error(error); }
+    if (error) console.error(error);
     res.send({
       cards: cards
     })
